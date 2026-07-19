@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yapshell"
+version = "1.0.0"
+description = "A funky CLI that talks to Qwen 3.6 via Ollama with animations and attitude"
+requires-python = ">=3.9"
+dependencies = [
+    "requests>=2.28",
+]
+
+[project.scripts]
+yapshell = "yapshell.main:main"
