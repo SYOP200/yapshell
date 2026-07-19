@@ -1,4 +1,4 @@
-# 🐍 yap-shell
+# yap-shell
 
 Your overly chatty terminal companion running Qwen 3.6 via Ollama!
 
@@ -31,12 +31,12 @@ python3 yapshell/main.py
 |-------------|------------------------------|
 | (anything)  | Chat with YAP                |
 | `/help`     | Show command list            |
-| `/joke`     | Tell a joke 😂              |
-| `/art`      | Show ASCII art 🎨           |
-| `/fact`     | Random fun fact 📚          |
+| `/joke`     | Tell a joke                  |
+| `/art`      | Show ASCII art               |
+| `/fact`     | Random fun fact              |
 | `/clear`    | Clear the screen             |
 | `/status`   | System stats                 |
-| `/compliment` | Get complimented 💅       |
+| `/compliment` | Get complimented           |
 | `/quit`     | Exit gracefully              |
 
 ## How It Works
@@ -44,6 +44,6 @@ yap-shell talks to Ollama's CLI directly via subprocess — no Python API librar
 
 ```bash
 ollama pull qwen3.6
-ollama run qwen3.6  # keep this running, or yap will auto-start it
+# (optional) ollama run qwen3.6  # keep this running, or yap will auto-start it
 python3 main.py
 ```
