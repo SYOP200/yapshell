@@ -1,0 +1,6 @@
+Metadata-Version: 2.4
+Name: yapshell
+Version: 1.0.0
+Summary: A funky CLI that talks to Qwen 3.6 via Ollama with animations and attitude
+Requires-Python: >=3.9
+Requires-Dist: requests>=2.28

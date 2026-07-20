@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+yapshell/__init__.py
+yapshell/main.py
+yapshell/ollama_client.py
+yapshell.egg-info/PKG-INFO
+yapshell.egg-info/SOURCES.txt
+yapshell.egg-info/dependency_links.txt
+yapshell.egg-info/entry_points.txt
+yapshell.egg-info/requires.txt
+yapshell.egg-info/top_level.txt
