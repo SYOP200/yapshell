@@ -15,6 +15,10 @@ Your overly chatty terminal companion running Qwen 3.6 via Ollama!
 - Python 3.9+
 - [Ollama](https://ollama.com) with `qwen3.6` model loaded
 
+## Install
+```sh
+pip install yapshell
+```
 ## Run
 From the project root:
 ```bash
