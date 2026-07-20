@@ -7,6 +7,7 @@ name = "yapshell"
 version = "1.0.0"
 description = "A funky CLI that talks to Qwen 3.6 via Ollama with animations and attitude"
 requires-python = ">=3.9"
+license = "MIT"
 dependencies = [
     "requests>=2.28",
 ]
