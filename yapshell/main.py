@@ -60,12 +60,13 @@ def c(text, color_code):
 
 # ── ASCII Art Banners ─────────────────────────────────────────────
 BANNER = r"""
- ██╗   ██╗ █████╗ ███╗   ██╗███████╗    ██████╗ ██╗   ██╗███████╗██████╗ ██╗
- ██║   ██║██╔══██╗████╗  ██║██╔════╝    ██╔══██╗██║   ██║██╔════╝██╔══██╗██║
- ██║   ██║███████║██╔██╗ ██║█████╗      ██████╔╝██║   ██║█████╗  ██████╔╝██║
- ╚██╗ ██╔╝██╔══██║██║╚██╗██║██╔══╝      ██╔══██╗╚██╗ ██╔╝██╔══╝  ██╔══██╗██║
-  ╚████╔╝ ██║  ██║██║ ╚████║██║         ██║  ██║ ╚████╔╝ ███████╗██║  ██║███████╗
-   ╚═══╝  ╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝         ╚═╝  ╚═╝  ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝
+__     __      _____  _      __     __      _____  _ 
+\ \   / //\   |  __ \| |     \ \   / //\   |  __ \| |
+ \ \_/ //  \  | |__) | |      \ \_/ //  \  | |__) | |
+  \   // /\ \ |  ___/| |       \   // /\ \ |  ___/| |
+   | |/ ____ \| |    |_|        | |/ ____ \| |    |_|
+   |_/_/    \_\_|    (_)        |_/_/    \_\_|    (_)
+                                                     
                                                                                       
                        YAP · shell
 """
@@ -230,12 +231,12 @@ class YapShell:
             "What's on your mind, boss?",
             "Drop some knowledge on me!",
             "Yap at me anytime!",
-            "Type anything — I'll do my best (lol)",
+            "Type anything — I'll make up an answer for you!",
         ])
         return f"{c(f'({self.line_count}) yap', Colors.BOLD)} » {quote}"
 
     def _display_welcome(self):
-        print(BANNER)
+        print(c(BANNER, Colors.RED))
         art = random.choice(list(EASTER_EGGS.values()))
         print()
         sys.stdout.write(c(art, Colors.BRIGHT_MAGENTA))
@@ -249,7 +250,10 @@ class YapShell:
 
         if cmd_name in ("/quit", "/exit"):
             self.running = False
+            import time
             print(f"\n{c('BYE', Colors.BRIGHT_GREEN)} Peace out! Don't talk too much to anyone else.")
+            time.sleep(2)
+            os.system("clear")
 
         elif cmd_name == "/clear":
             os.system("clear")
@@ -435,6 +439,7 @@ class YapShell:
 
 
 def run():
+    sys.stdout.flush()
     os.system("clear")
     shell = YapShell()
     shell._display_welcome()
@@ -466,7 +471,6 @@ def run():
         if user_input.startswith("/"):
             if user_input.lower() in ("/quit", "/exit"):
                 shell._handle_command(user_input.lower())
-                os.system("clear")
                 return
             shell._handle_command(user_input.lower())
             continue
