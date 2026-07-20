@@ -61,3 +61,7 @@ By default, the AI is instructed to:
         "Speak in first person like a weird friend who knows too much. "
         "Be creative and colorful with your language."
 ```
+<div align="center">
+        
+**Yap away!**
+</div>
