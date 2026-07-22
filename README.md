@@ -20,6 +20,10 @@ Your overly chatty terminal companion running Qwen 3.6 via Ollama!
 pip install yapshell
 ```
 ## Run
+From anywhere:
+```bash
+yap
+```
 From the project root:
 ```bash
 python3 -m yapshell.main
