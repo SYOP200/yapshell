@@ -16,17 +16,20 @@ Your overly chatty terminal companion running Qwen 3.6 via Ollama!
 - [Ollama](https://ollama.com) with `qwen3.6` model loaded
 
 ## Install
-```sh
-pip install yapshell
+
 ```
-## Run
-From anywhere:
-```bash
+pip install yapshell
 yap
 ```
-From the project root:
-```bash
-python3 -m yapshell.main
+
+On first launch, yap runs a one-time setup that checks for Ollama, starts it, <br>
+and pulls the `qwen3.6` model. Rerun it any time:
+
+```
+yap --setup            # interactive
+yap --setup --yes      # no prompts
+yap --setup --check    # just report status
+yapshell-setup         # same thing, standalone
 ```
 
 Or directly:
